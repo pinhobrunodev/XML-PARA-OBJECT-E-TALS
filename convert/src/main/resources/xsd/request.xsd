@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://telefonica.br/Customer/CustomerInformationMgmt/CustomerProfileManagement/RegisterPrePaidCustomerRequest/v2" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://telefonica.br/Customer/CustomerInformationMgmt/CustomerProfileManagement/RegisterPrePaidCustomerRequest/v2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="registerPrePaidCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="individualIdentification">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nationalIdentilyCardNr" type="xs:unsignedLong" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="geographicArea">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="code" type="xs:unsignedByte" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="network">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="networkNumber" type="xs:unsignedLong" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contactMedium">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="eMailAddress" type="xs:string" />
+                            <xs:element name="telephoneNumber" type="xs:unsignedLong" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="individual">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="gender" type="xs:string" />
+                            <xs:element name="maritalStatus" type="xs:string" />
+                            <xs:element name="legalName" type="xs:string" />
+                            <xs:element name="birthDate" type="xs:dateTime" />
+                            <xs:element name="motherName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="partyIdentification">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="type" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="address">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="streetNr" type="xs:unsignedByte" />
+                            <xs:element name="streetName" type="xs:string" />
+                            <xs:element name="streetSuffix" type="xs:string" />
+                            <xs:element name="postcode" type="xs:unsignedInt" />
+                            <xs:element name="municipalityname" type="xs:string" />
+                            <xs:element name="nameState" type="xs:string" />
+                            <xs:element name="nameCity" type="xs:string" />
+                            <xs:element name="isCountrySide" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="promotionsSMS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="parameter" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="protocolSMS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="parameter" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="servicesSMS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="parameter" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="partnersSMS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="parameter" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="telemarketing">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="parameter" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="salesChannel">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="salesChannel" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customerOrder">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="customerOrderType" type="xs:string" />
+                            <xs:element name="purchaseOrderNumber" type="xs:unsignedLong" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customerBillPresentationMedia">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:unsignedByte" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customerBill">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="paymentDueDate" type="xs:dateTime" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customerAllow">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="contactPermission" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="digitalSignature">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ipAddress">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="networkNumber" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="signatureDate">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="startDateTime" type="xs:dateTime" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="store">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="organizationIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="documentNumber" type="xs:unsignedLong" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="user">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="userId" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="indicators">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="indicatorMobile">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="parameter" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="indicatorFixed">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="parameter" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="indicatorAmend">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="parameter" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="communicationInteraction">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="description" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="customerAccount">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="consent" type="xs:boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
